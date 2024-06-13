@@ -13,7 +13,6 @@ late_prop_samp = (late_shipments["late"] == "Yes").mean()
 # Print the results
 print(late_prop_samp)
 
-# -
 
 # added/edited
 import numpy as np
@@ -57,7 +56,6 @@ upper = np.quantile(late_shipments_boot_distn, 0.975)
 
 # Print the confidence interval
 print((lower, upper))
-# -
 
 # added/edited
 late_yes = late_shipments[late_shipments["late_delivery"] == 1]
@@ -82,7 +80,6 @@ t_stat = numerator / denominator
 
 # Print the test statistic
 print(t_stat)
-# -
 
 # added/edited
 from scipy.stats import t
@@ -124,7 +121,6 @@ s_diff = sample_dem_data["diff"].std()
 
 # Print s_diff
 print(s_diff)
-# -
 
 # Plot a histogram of diff with 20 bins
 sample_dem_data["diff"].hist(bins=20)
@@ -152,7 +148,6 @@ paired_test_results = pingouin.ttest(
 
 # Print the paired test results
 print(paired_test_results)
-# -
 
 # added/edited
 import seaborn as sns
@@ -170,7 +165,6 @@ s_pack_by_mode = late_shipments.groupby("shipment_mode")["pack_price"].std()
 
 # Print the grouped standard deviations
 print(s_pack_by_mode)
-# -
 
 # Boxplot of shipment_mode vs. pack_price
 sns.boxplot(x="pack_price", y="shipment_mode", data=late_shipments)
@@ -233,7 +227,6 @@ p_value = 1 - norm.cdf(z_score)
 
 # Print the p-value
 print(p_value)
-# -
 
 # added/edited
 late_shipments["freight_cost_group"] = late_shipments["freight_cost_groups"].fillna(
@@ -276,7 +269,6 @@ p_value = 1 - norm.cdf(z_score)
 
 # Print p_value
 print(p_value)
-# -
 
 # added/edited
 from statsmodels.stats.proportion import proportions_ztest
@@ -307,7 +299,6 @@ stat, p_value = proportions_ztest(count=success_counts, nobs=n, alternative="lar
 
 # Print the results
 print(stat, p_value)
-# -
 
 # added/edited
 late_shipments = late_shipments[late_shipments.vendor_inco_term != "DDU"]
@@ -327,7 +318,6 @@ wide_props = props.unstack()
 
 # Print wide_props
 print(wide_props)
-# -
 
 # Proportional stacked bar plot of freight_cost_group vs. vendor_inco_term
 wide_props.plot(kind="bar", stacked=True)
@@ -341,7 +331,6 @@ expected, observed, stats = pingouin.chi2_independence(
 
 # Print results
 print(stats[stats["test"] == "pearson"])
-# -
 
 # added/edited
 hypothesized_dict = {
@@ -367,7 +356,6 @@ hypothesized["n"] = hypothesized["prop"] * n_total
 
 # Print the modified hypothesized DataFrame
 print(hypothesized)
-# -
 
 # Plot a red bar graph of n vs. vendor_inco_term for incoterm_counts
 plt.bar(
@@ -398,7 +386,6 @@ plt.bar(
 )
 plt.legend()
 plt.show()
-# -
 
 # added/edited
 from scipy.stats import chisquare
