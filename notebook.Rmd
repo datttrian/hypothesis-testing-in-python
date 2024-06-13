@@ -93,10 +93,10 @@ z-score.
 You'll now return to the late shipments dataset and the proportion of
 late shipments.
 
-The null hypothesis, \\H\_{0}\\, is that the proportion of late
+The null hypothesis, $H\_{0}$, is that the proportion of late
 shipments is six percent.
 
-The alternative hypothesis, \\H\_{A}\\, is that the proportion of late
+The alternative hypothesis, $H\_{A}$, is that the proportion of late
 shipments is **greater than** six percent.
 
 The observed sample statistic, `late_prop_samp`, the hypothesized value,
@@ -186,9 +186,9 @@ sample sizes are `n_no` and `n_yes`. `numpy` is also loaded as `np`.
 
 **Instructions**
 
-- Calculate the numerator of the \\t\\ test statistic.
-- Calculate the denominator of the \\t\\ test statistic.
-- Use those two numbers to calculate the \\t\\ test statistic.
+- Calculate the numerator of the $t$ test statistic.
+- Calculate the denominator of the $t$ test statistic.
+- Use those two numbers to calculate the $t$ test statistic.
 
 **Answer**
 
@@ -217,10 +217,10 @@ get a p-value.
 
 Recall the hypotheses:
 
-\\H\_{0}\\: The mean weight of shipments that weren't late is the same
+$H\_{0}$: The mean weight of shipments that weren't late is the same
 as the mean weight of shipments that were late.
 
-\\H\_{A}\\: The mean weight of shipments that weren't late is less than
+$H\_{A}$: The mean weight of shipments that weren't late is less than
 the mean weight of shipments that were late.
 
 The test statistic, `t_stat`, is available, as are the samples sizes for
@@ -331,8 +331,8 @@ proportion of county-level votes for the Democratic candidate in 2012
 and 2016 to identify if the difference is significant. The hypotheses
 are as follows:
 
-\\H\_{0}\\: The proportion of democratic votes in 2012 and 2016 were the
-same. \\H\_{A}\\: The proportion of democratic votes in 2012 and 2016
+$H\_{0}$: The proportion of democratic votes in 2012 and 2016 were the
+same. $H\_{A}$: The proportion of democratic votes in 2012 and 2016
 were different.
 
 `sample_dem_data` is available and has the columns `diff`,
@@ -437,10 +437,10 @@ us whether the mean pack price was different in each category. To
 determine that, we can use an ANOVA test. The null and alternative
 hypotheses can be written as follows.
 
-\\H\_{0}\\: Pack prices for every category of shipment mode are the
+$H\_{0}$: Pack prices for every category of shipment mode are the
 same.
 
-\\H\_{A}\\: Pack prices for some categories of shipment mode are
+$H\_{A}$: Pack prices for some categories of shipment mode are
 different.
 
 Use a significance level of 0.1.
@@ -512,7 +512,7 @@ statistic. An alternative is to use an equation for the standard error
 based on the sample proportion, hypothesized proportion, and sample
 size.
 
-\\z = \dfrac{\hat{p} - p\_{0}}{\sqrt{\dfrac{p\_{0}\*(1-p\_{0})}{n}}}\\
+$z = \dfrac{\hat{p} - p\_{0}}{\sqrt{\dfrac{p\_{0}\*(1-p\_{0})}{n}}}$
 
 You'll revisit the p-value using this simpler calculation.
 
@@ -599,10 +599,10 @@ are `"expensive"` and `"reasonable"`.
 The hypotheses to test, with `"late"` corresponding to the proportion of
 late shipments for that group, are
 
-\\H\_{0}\\: \\late\_{\text{expensive}} - late\_{\text{reasonable}} = 0\\
+$H\_{0}$: $late\_{\text{expensive}} - late\_{\text{reasonable}} = 0$
 
-\\H\_{A}\\: \\late\_{\text{expensive}} - late\_{\text{reasonable}} \>
-0\\
+$H\_{A}$: $late\_{\text{expensive}} - late\_{\text{reasonable}} \>
+0$
 
 `p_hats` contains the estimates of population proportions (sample
 proportions) for each `freight_cost_group`:
@@ -626,7 +626,7 @@ proportions) for each `freight_cost_group`:
 
 **Instructions**
 
-- Calculate the pooled sample proportion, \\\hat{p}\\, from `p_hats` and
+- Calculate the pooled sample proportion, $\hat{p}$, from `p_hats` and
   `ns`.
 
 \$\$ \hat{p} = \frac{n\_{\text{expensive}} \times
@@ -724,10 +724,10 @@ real-world analyses. For daily usage, it's better to use the
 
 Recall the hypotheses.
 
-\\H\_{0}\\: \\late\_{\text{expensive}} - late\_{\text{reasonable}} = 0\\
+$H\_{0}$: $late\_{\text{expensive}} - late\_{\text{reasonable}} = 0$
 
-\\H\_{A}\\: \\late\_{\text{expensive}} - late\_{\text{reasonable}} \>
-0\\
+$H\_{A}$: $late\_{\text{expensive}} - late\_{\text{reasonable}} \>
+0$
 
 `late_shipments` is available, containing the `freight_cost_group`
 column. `numpy` and `pandas` have been loaded under their standard
@@ -796,9 +796,9 @@ are:
 Perhaps the incoterms affect whether or not the freight costs are
 expensive. Test these hypotheses with a significance level of `0.01`.
 
-\\H\_{0}\\: `vendor_inco_term` and `freight_cost_group` are independent.
+$H\_{0}$: `vendor_inco_term` and `freight_cost_group` are independent.
 
-\\H\_{A}\\: `vendor_inco_term` and `freight_cost_group` are associated.
+$H\_{A}$: `vendor_inco_term` and `freight_cost_group` are associated.
 
 `late_shipments` is available, and the following have been loaded:
 `matplotlib.pyplot` as `plt`, `pandas` as `pd`, and `pingouin`.
@@ -946,9 +946,9 @@ whether the differences are statistically significant.
 
 Recall the hypotheses for this type of test:
 
-\\H\_{0}\\: The sample matches with the hypothesized distribution.
+$H\_{0}$: The sample matches with the hypothesized distribution.
 
-\\H\_{A}\\: The sample does not match with the hypothesized
+$H\_{A}$: The sample does not match with the hypothesized
 distribution.
 
 To decide which hypothesis to choose, we'll set a significance level of
