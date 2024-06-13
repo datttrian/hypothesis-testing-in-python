@@ -1,7 +1,11 @@
 # Hypothesis Testing in Python
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datttrian/hypothesis-testing-in-python/blob/main/src/notebook.ipynb)
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/datttrian/hypothesis-testing-in-python)
+
 This is a repository for the DataCamp course Hypothesis Testing in Python. The
-full course is available from [DataCamp](https://www.datacamp.com/courses/sampling-in-python).
+full course is available from [DataCamp](https://www.datacamp.com/courses/hypothesis-testing-in-python).
 
 ![Clear as Data](http://drive.google.com/uc?export=view&id=1PJVtMhPE_h3g2c9wXm9tf6_pIhvMyDRI)
 
