@@ -1,4 +1,8 @@
-# Calculating the sample mean
+# Hypothesis Testing in Python
+
+## Hypothesis Testing Fundamentals
+
+### Calculating the sample mean
 
 The `late_shipments` dataset contains supply chain data on the delivery
 of medical supplies. Each row represents one delivery of a part. The
@@ -22,7 +26,11 @@ be quickly calculated using the syntax:
 
 **Answer**
 
-# Calculating a z-score
+```{python}
+
+```
+
+### Calculating a z-score
 
 Since variables have arbitrary ranges and units, we need to standardize
 them. For example, a hypothesis test that gave different answers if the
@@ -50,29 +58,11 @@ proportion of late shipments, available as a list.
 
 **Answer**
 
-# Calculating p-values
+```{python}
 
-In order to determine whether to choose the null hypothesis or the
-alternative hypothesis, you need to calculate a p-value from the
-z-score.
+```
 
-You'll now return to the late shipments dataset and the proportion of
-late shipments.
-
-The null hypothesis, \\H\_{0}\\, is that the proportion of late
-shipments is six percent.
-
-The alternative hypothesis, \\H\_{A}\\, is that the proportion of late
-shipments is **greater than** six percent.
-
-The observed sample statistic, `late_prop_samp`, the hypothesized value,
-`late_prop_hyp` (6%), and the bootstrap standard error, `std_error` are
-available. `norm` from `scipy.stats` has also been loaded without an
-alias.
-
-**InstructionsAnswer**
-
-# Calculating a confidence interval
+### Calculating a confidence interval
 
 If you give a single estimate of a sample statistic, you are bound to be
 wrong by some amount. For example, the hypothesized proportion of late
@@ -101,7 +91,13 @@ and `numpy` are loaded with their usual aliases.
 
 **Answer**
 
-# Two sample mean test statistic
+```{python}
+
+```
+
+## Two-Sample and ANOVA Tests
+
+### Two sample mean test statistic
 
 The hypothesis test for determining if there is a difference between the
 means of two populations uses a different type of test statistic to the
@@ -131,32 +127,11 @@ sample sizes are `n_no` and `n_yes`. `numpy` is also loaded as `np`.
 
 **Answer**
 
-# From t to p
+```{python}
 
-Previously, you calculated the test statistic for the two-sample problem
-of whether the mean weight of shipments is smaller for shipments that
-weren't late (`late == "No"`) compared to shipments that were late
-(`late == "Yes"`). In order to make decisions about it, you need to
-transform the test statistic with a cumulative distribution function to
-get a p-value.
+```
 
-Recall the hypotheses:
-
-\\H\_{0}\\: The mean weight of shipments that weren't late is the same
-as the mean weight of shipments that were late.
-
-\\H\_{A}\\: The mean weight of shipments that weren't late is less than
-the mean weight of shipments that were late.
-
-The test statistic, `t_stat`, is available, as are the samples sizes for
-each group, `n_no` and `n_yes`. Use a significance level of
-`alpha = 0.05`.
-
-`t` has also been imported from `scipy.stats`.
-
-**InstructionsAnswer**
-
-# Visualizing the difference
+### Visualizing the difference
 
 Before you start running hypothesis tests, it's a great idea to perform
 some exploratory data analysis; that is, calculating summary statistics
@@ -179,7 +154,11 @@ columns containing the samples are `dem_percent_12` and
 
 **Answer**
 
-# Using ttest()
+```{python}
+
+```
+
+### Using ttest()
 
 Manually calculating test statistics and transforming them with a CDF to
 get a p-value is a lot of effort to compare two sample means. The
@@ -209,7 +188,11 @@ were different.
 
 **Answer**
 
-# Visualizing many categories
+```{python}
+
+```
+
+### Visualizing many categories
 
 So far in this chapter, we've only considered the case of differences in
 a numeric variable between two categories. Of course, many datasets
@@ -233,7 +216,11 @@ loaded with their standard aliases, and `seaborn` is loaded as `sns`.
 
 **Answer**
 
-# Conducting an ANOVA test
+```{python}
+
+```
+
+### Conducting an ANOVA test
 
 The box plots made it look like the distribution of pack price was
 different for each of the three shipment modes. However, it didn't tell
@@ -258,7 +245,11 @@ Use a significance level of 0.1.
 
 **Answer**
 
-# Pairwise t-tests
+```{python}
+
+```
+
+### Pairwise t-tests
 
 The ANOVA test didn't tell you which categories of shipment mode had
 significant differences in pack prices. To pinpoint which categories had
@@ -273,7 +264,13 @@ differences, you could instead use pairwise t-tests.
 
 **Answer**
 
-# Test for single proportions
+```{python}
+
+```
+
+## Proportion Tests
+
+### Test for single proportions
 
 In Chapter 1, you calculated a p-value for a test hypothesizing that the
 proportion of late shipments was **greater than** 6%. In that chapter,
@@ -298,7 +295,11 @@ their usual aliases, and `norm` is loaded from `scipy.stats`.
 
 **Answer**
 
-# Test of two proportions
+```{python}
+
+```
+
+### Test of two proportions
 
 You may wonder if the amount paid for freight affects whether or not the
 shipment was late. Recall that in the `late_shipments` dataset, whether
@@ -344,7 +345,11 @@ n\_{\text{reasonable}}} \$\$
 
 **Answer**
 
-# proportions_ztest() for two samples
+```{python}
+
+```
+
+### proportions_ztest() for two samples
 
 That took a lot of effort to calculate the p-value, so while it is
 useful to see how the calculations work, it isn't practical to do in
@@ -369,7 +374,11 @@ aliases, and `proportions_ztest` has been loaded from
 
 **Answer**
 
-# Performing a chi-square test
+```{python}
+
+```
+
+### Performing a chi-square test
 
 The *chi-square independence test* compares proportions of successes of
 one categorical variable across the categories of another categorical
@@ -411,7 +420,11 @@ expensive. Test these hypotheses with a significance level of `0.01`.
 
 **Answer**
 
-# Visualizing goodness of fit
+```{python}
+
+```
+
+### Visualizing goodness of fit
 
 The *chi-square goodness of fit test* compares proportions of each level
 of a categorical variable to hypothesized values. Before running such a
@@ -441,7 +454,11 @@ loaded with their standard aliases.
 
 **Answer**
 
-# Performing a goodness of fit test
+```{python}
+
+```
+
+### Performing a goodness of fit test
 
 The bar plot of `vendor_inco_term` suggests that the distribution across
 the four categories was quite close to the hypothesized distribution.
@@ -468,7 +485,13 @@ exercise are available. `chisquare` from `scipy.stats` has been loaded.
 
 **Answer**
 
-# Testing sample size
+```{python}
+
+```
+
+## Non-Parametric Tests
+
+### Testing sample size
 
 In order to conduct a hypothesis test and be sure that the result is
 fair, a sample must meet three requirements: it is a random sample of
@@ -516,7 +539,11 @@ entries, you check to see if all its elements are less than `5`, using
 
 **Answer**
 
-# Wilcoxon signed-rank test
+```{python}
+
+```
+
+### Wilcoxon signed-rank test
 
 You'll explore the difference between the proportion of county-level
 votes for the Democratic candidate in 2012 and 2016 to identify if the
@@ -538,7 +565,11 @@ following packages have also been loaded: `pingouin` and `pandas` as
 
 **Answer**
 
-# Wilcoxon-Mann-Whitney
+```{python}
+
+```
+
+### Wilcoxon-Mann-Whitney
 
 Another class of non-parametric hypothesis tests are called *rank sum
 tests*. Ranks are the positions of numeric values from smallest to
@@ -567,7 +598,11 @@ loaded: `pingouin` and `pandas` as `pd`.
 
 **Answer**
 
-# Kruskal-Wallis
+```{python}
+
+```
+
+### Kruskal-Wallis
 
 Recall that the Kruskal-Wallis test is a non-parametric version of an
 ANOVA test, comparing the means across multiple groups.
@@ -581,3 +616,7 @@ loaded: `pingouin` and `pandas` as `pd`.
   shipment modes in `late_shipments`.
 
 **Answer**
+
+```{python}
+
+```
