@@ -1,5 +1,7 @@
 # Hypothesis Testing in Python
 
+[![View On GitHub](github.svg)](https://github.com/datttrian/hypothesis-testing-in-python)
+
 ## Hypothesis Testing Fundamentals
 
 ### Calculating the sample mean
